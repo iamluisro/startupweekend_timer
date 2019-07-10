@@ -30,7 +30,7 @@ const Timer = () => {
 	}
 
 	function reset() {
-		setTimerTime(3);
+		setTimerTime(11);
 		setIsActive(false);
 	}
 
@@ -74,7 +74,7 @@ const Timer = () => {
 	return (
 		<div className='app'>
 			<div className='time'>
-				{timerTime} {minutes} {seconds}
+				{timerTime < 10 ? '0' + timerTime : timerTime} {minutes} {seconds}
 			</div>
 
 			<div className='row'>
