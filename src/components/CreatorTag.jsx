@@ -1,11 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const CreatorStyled = styled.div`
+	display: grid;
+	justify-content: right;
+`;
+
+const CreatorStyledP = styled.p`
+	justify-content: right;
+	font-size: 10px;
+`;
 
 const CreatorTag = () => (
-	<div className='CreatorTag'>
+	<CreatorStyled>
 		<div className='CreatorTag-container'>
-			<h1>Creator Tag goes here</h1>
+			<CreatorStyledP>
+				by Luis Rodriguez{' '}
+				<a href='https://github.com/iamluisro' target='blank'>
+					Github
+				</a>
+			</CreatorStyledP>
 		</div>
-	</div>
+	</CreatorStyled>
 );
 
 export default CreatorTag;

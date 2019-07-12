@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
+const SocialStyle = styled.div`
+	display: grid;
+	justify-content: center;
+`;
 const Social = () => (
-	<div className='Social'>
+	<SocialStyle>
 		<div className='Social-component'>
-			<h1>Social goes here</h1>
+			<p>facebook</p>
 		</div>
-	</div>
+	</SocialStyle>
 );
 
 export default Social;
