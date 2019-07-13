@@ -7,7 +7,6 @@ const MainStyled = styled.div`
 	grid-auto-rows: 95vh;
 	justify-content: center;
 	padding: 1em;
-	border: 1px solid blue;
 `;
 
 const MainContainer = styled.div`
@@ -15,11 +14,12 @@ const MainContainer = styled.div`
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
 	grid-row-gap: 0.5em;
-	border: 1px solid purple;
 
 	@media only screen and (max-width: 767px) {
+		display: grid;
 		grid-template-columns: 1fr;
-		border: 1px solid yellow;
+		grid-gap: 2rem;
+		grid-row-gap: 0.5em;
 	}
 `;
 

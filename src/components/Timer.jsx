@@ -3,28 +3,48 @@ import styled from 'styled-components';
 
 const TimerStyled = styled.div`
 	display: grid;
-	border: 1px solid red;
 	justify-content: center;
+	border: 1px solid red;
 `;
 
 const TimerTimeStyled = styled.div`
-	font-size: 500%;
-	border: 1px solid red;
+	font-size: 1000%;
+	text-align: center;
+	border: 1px solid blue;
+
+	@media only screen and (max-width: 767px) {
+		font-size: 45px;
+	}
 `;
 
 const StartStyled = styled.div`
 	display: grid;
+
 	justify-content: center;
-	border: 1px solid red;
+
+	@media only screen and (max-width: 767px) {
+		grid-template-columns: 250px;
+		justify-content: center;
+		border: 1px solid red;
+	}
 `;
 
-const ButtonStyled = styled.div`
-	display: grid;
-	justify-content: center;
+const ButtonStyled = styled.button`
 	background-color: #0db14b;
 	color: white;
-	border: 1px solid red;
 	text-align: center;
+	font-size: 25px;
+	margin: 1em;
+	padding: 0.5em 0.5em;
+	border-radius: 10px;
+
+	@media only screen and (max-width: 767px) {
+		grid-template-rows: auto;
+		grid-template-rows: fit-content(40%);
+
+		justify-content: center;
+		border: 1px solid red;
+	}
 `;
 
 const ConsoleLog = ({ children }) => {
@@ -126,10 +146,11 @@ const Timer = () => {
 				</ButtonStyled>
 
 				{isActive === false && (
-					<div className='buttonsTimer'>
-						<button onClick={oneMin}>1 min</button> <button onClick={threeMin}>3 min</button>{' '}
-						<button onClick={fiveMin}>5 min</button>
-					</div>
+					<StartStyled>
+						<ButtonStyled onClick={oneMin}>1 min</ButtonStyled>
+						<ButtonStyled onClick={threeMin}>3 min</ButtonStyled>
+						<ButtonStyled onClick={fiveMin}>5 min</ButtonStyled>
+					</StartStyled>
 				)}
 			</StartStyled>
 			<ConsoleLog>{isActive}</ConsoleLog>
