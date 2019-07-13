@@ -4,13 +4,11 @@ import styled from 'styled-components';
 const TimerStyled = styled.div`
 	display: grid;
 	justify-content: center;
-	border: 1px solid red;
 `;
 
 const TimerTimeStyled = styled.div`
 	font-size: 1000%;
 	text-align: center;
-	border: 1px solid blue;
 
 	@media only screen and (max-width: 767px) {
 		font-size: 45px;
@@ -25,7 +23,6 @@ const StartStyled = styled.div`
 	@media only screen and (max-width: 767px) {
 		grid-template-columns: 250px;
 		justify-content: center;
-		border: 1px solid red;
 	}
 `;
 
@@ -41,9 +38,7 @@ const ButtonStyled = styled.button`
 	@media only screen and (max-width: 767px) {
 		grid-template-rows: auto;
 		grid-template-rows: fit-content(40%);
-
 		justify-content: center;
-		border: 1px solid red;
 	}
 `;
 
