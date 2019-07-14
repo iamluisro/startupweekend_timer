@@ -138,24 +138,26 @@ const Timer = () => {
 	);
 
 	return (
-		<TimerStyled>
-			<TimerTimeStyled>
-				{minutes < 10 ? '0' + minutes : minutes}:{seconds < 10 ? '0' + seconds : seconds}{' '}
-			</TimerTimeStyled>
+		<div>
+			<TimerStyled>
+				<TimerTimeStyled>
+					{minutes < 10 ? '0' + minutes : minutes}:{seconds < 10 ? '0' + seconds : seconds}{' '}
+				</TimerTimeStyled>
 
-			<StartStyled>
-				{isActive === false && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Start </ButtonStyled>}
-				{isActive === false && timerTime > 0 && <ButtonStyled onClick={resetTimer}>Reset </ButtonStyled>}
-				{isActive === true && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Pause </ButtonStyled>}
-				{isActive === false && timerTime === 0 && <ButtonStyled onClick={oneMin}>1 min</ButtonStyled>}
-				{isActive === false && timerTime === 0 && <ButtonStyled onClick={threeMin}>3 min</ButtonStyled>}
-				{isActive === false && timerTime === 0 && <ButtonStyled onClick={fiveMin}>5 min</ButtonStyled>}
-			</StartStyled>
-			<ConsoleLog>{isActive}</ConsoleLog>
-			<ConsoleLog>{timerTime}</ConsoleLog>
-			<ConsoleLog>{`Min: ${minutes}`}</ConsoleLog>
-			<ConsoleLog>{`Sec: ${seconds}`}</ConsoleLog>
-		</TimerStyled>
+				<StartStyled>
+					{isActive === false && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Start </ButtonStyled>}
+					{isActive === false && timerTime > 0 && <ButtonStyled onClick={resetTimer}>Reset </ButtonStyled>}
+					{isActive === true && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Pause </ButtonStyled>}
+					{isActive === false && timerTime === 0 && <ButtonStyled onClick={oneMin}>1 min</ButtonStyled>}
+					{isActive === false && timerTime === 0 && <ButtonStyled onClick={threeMin}>3 min</ButtonStyled>}
+					{isActive === false && timerTime === 0 && <ButtonStyled onClick={fiveMin}>5 min</ButtonStyled>}
+				</StartStyled>
+				<ConsoleLog>{isActive}</ConsoleLog>
+				<ConsoleLog>{timerTime}</ConsoleLog>
+				<ConsoleLog>{`Min: ${minutes}`}</ConsoleLog>
+				<ConsoleLog>{`Sec: ${seconds}`}</ConsoleLog>
+			</TimerStyled>
+		</div>
 	);
 };
 

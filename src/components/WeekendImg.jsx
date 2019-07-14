@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 const WeekndStyle = styled.div`text-align: center;`;
 
-const HeaderImg = styled.img`width: 70%;`;
+const HeaderImg = styled.img`
+	width: 70%;
+	padding: 2em 0 0 0;
+`;
 
 const WeekendImg = () => (
 	<WeekndStyle>
