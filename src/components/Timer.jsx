@@ -16,12 +16,12 @@ const TimerTimeStyled = styled.div`
 `;
 
 const StartStyled = styled.div`
-	display: grid;
-	grid-template-columns: 50%;
+	display: flex;
 	justify-content: center;
 
 	@media only screen and (max-width: 767px) {
-		grid-template-columns: 250px;
+		display: grid;
+		grid-template-columns: 50%;
 		justify-content: center;
 	}
 `;
@@ -29,10 +29,11 @@ const StartStyled = styled.div`
 const ButtonStyled = styled.button`
 	background-color: #0db14b;
 	color: white;
+	width: 100%;
 	text-align: center;
 	font-size: 25px;
 	margin: 0.25em;
-	padding: 0.5em 0.5em;
+	padding: 0.3em 0.3em;
 	border-radius: 25px;
 
 	@media only screen and (max-width: 767px) {
