@@ -11,13 +11,13 @@ const TimerTimeStyled = styled.div`
 	text-align: center;
 
 	@media only screen and (max-width: 767px) {
-		font-size: 45px;
+		font-size: 100px;
 	}
 `;
 
 const StartStyled = styled.div`
 	display: grid;
-
+	grid-template-columns: 50%;
 	justify-content: center;
 
 	@media only screen and (max-width: 767px) {
@@ -31,9 +31,9 @@ const ButtonStyled = styled.button`
 	color: white;
 	text-align: center;
 	font-size: 25px;
-	margin: 1em;
+	margin: 0.25em;
 	padding: 0.5em 0.5em;
-	border-radius: 10px;
+	border-radius: 25px;
 
 	@media only screen and (max-width: 767px) {
 		grid-template-rows: auto;
@@ -70,6 +70,13 @@ const Timer = () => {
 
 	function startTimer() {
 		setIsActive(!isActive);
+	}
+
+	function resetTimer() {
+		setIsActive(false);
+		setTimerTime(0);
+		setSeconds(0);
+		setMinutes(0);
 	}
 
 	function threeMin() {
@@ -136,17 +143,12 @@ const Timer = () => {
 			</TimerTimeStyled>
 
 			<StartStyled>
-				<ButtonStyled className={`${isActive ? 'active' : 'inactive'}`} onClick={startTimer}>
-					{isActive ? 'Pause' : 'Start'}
-				</ButtonStyled>
-
-				{isActive === false && (
-					<StartStyled>
-						<ButtonStyled onClick={oneMin}>1 min</ButtonStyled>
-						<ButtonStyled onClick={threeMin}>3 min</ButtonStyled>
-						<ButtonStyled onClick={fiveMin}>5 min</ButtonStyled>
-					</StartStyled>
-				)}
+				{isActive === false && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Start </ButtonStyled>}
+				{isActive === false && timerTime > 0 && <ButtonStyled onClick={resetTimer}>Reset </ButtonStyled>}
+				{isActive === true && timerTime !== 0 && <ButtonStyled onClick={startTimer}>Pause </ButtonStyled>}
+				{isActive === false && timerTime === 0 && <ButtonStyled onClick={oneMin}>1 min</ButtonStyled>}
+				{isActive === false && timerTime === 0 && <ButtonStyled onClick={threeMin}>3 min</ButtonStyled>}
+				{isActive === false && timerTime === 0 && <ButtonStyled onClick={fiveMin}>5 min</ButtonStyled>}
 			</StartStyled>
 			<ConsoleLog>{isActive}</ConsoleLog>
 			<ConsoleLog>{timerTime}</ConsoleLog>

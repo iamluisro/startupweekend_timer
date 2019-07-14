@@ -7,7 +7,7 @@ const WeekndStyle = styled.div`text-align: center;`;
 const HeaderImg = styled.img`
 	width: 100%;
 	@media only screen and (max-width: 767px) {
-		width: 250px;
+		width: 70%;
 	}
 `;
 

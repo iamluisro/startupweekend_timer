@@ -5,7 +5,6 @@ import Content from '../components/Content';
 import Social from '../components/Social';
 import CreatorTag from '../components/CreatorTag';
 import Timer from '../components/Timer';
-import Top from '../components/Top';
 import WeekendImg from '../components/WeekendImg';
 import Partners from '../components/Partners';
 
@@ -22,7 +21,7 @@ const App = () => {
 	return (
 		<Main>
 			<GlobalStyle />
-			<Top />
+
 			<WeekendImg />
 			<Timer />
 			<Partners />
