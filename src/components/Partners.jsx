@@ -10,6 +10,7 @@ const PartnersStyled = styled.div`
 
 const G4sStyledLogo = styled.img`
 	width: 300px;
+	padding: 0 .5em 0 0;
 	@media only screen and (max-width: 767px) {
 		width: 150px;
 	}
@@ -17,6 +18,7 @@ const G4sStyledLogo = styled.img`
 
 const CoStyledLogo = styled.img`
 	width: 50px;
+	padding: 0 0 0 0.5em;
 	@media only screen and (max-width: 767px) {
 		width: 25px;
 	}
