@@ -25,7 +25,6 @@ const App = () => {
 			<WeekendImg />
 			<Timer />
 			<Partners />
-			<Social />
 			<CreatorTag />
 		</Main>
 	);
